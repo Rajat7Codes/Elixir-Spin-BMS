@@ -1,0 +1,35 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+logging:
+  level:
+    ROOT: DEBUG
+    org.hibernate.SQL: DEBUG
+    com.nextgencoder.clashhub: DEBUG
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-exclude: static/**
+    livereload:
+      enabled: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:4321/clash_db
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: eyJhbGciOiJIUzI1NiJ9.ew0KICAibmFtZSI6ICJOZXh0R2VuQ29kZXIiLA0KICAicHJvamVjdCI6ICJDbGFzaFJveWFsZUNoYWxsZW5nZUh1YiINCn0.gsC8BR-9ctyYoBxFGyFVGWAapuCHXp1bJhPH21cXuXo  # 🔑 replace with a long, random key
+    expiration: 86400000          # 24h in ms
