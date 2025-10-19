@@ -6,8 +6,8 @@
 
 logging:
   level:
-    ROOT: DEBUG
-    org.hibernate.SQL: DEBUG
+#    ROOT: DEBUG
+#    org.hibernate.SQL: DEBUG
     com.nextgencoder.clashhub: DEBUG
 
 spring:
@@ -33,3 +33,8 @@ app:
   jwt:
     secret: eyJhbGciOiJIUzI1NiJ9.ew0KICAibmFtZSI6ICJOZXh0R2VuQ29kZXIiLA0KICAicHJvamVjdCI6ICJDbGFzaFJveWFsZUNoYWxsZW5nZUh1YiINCn0.gsC8BR-9ctyYoBxFGyFVGWAapuCHXp1bJhPH21cXuXo  # 🔑 replace with a long, random key
     expiration: 86400000          # 24h in ms
+
+clashroyale:
+  api:
+    base-url: https://api.clashroyale.com/v1
+    token: ${CLASH_ROYALE_API_TOKEN}  # set in env for security

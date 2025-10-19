@@ -1,7 +1,8 @@
 package co.in.nextgencoder.clashhub.service;
 
 import co.in.nextgencoder.clashhub.domain.AppUser;
-import co.in.nextgencoder.clashhub.repository.UserRepository;
+import co.in.nextgencoder.clashhub.repository.AppUserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -14,13 +15,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
 public class AppUserDetailsService implements UserDetailsService {
 
-    private final UserRepository userRepository;
-
-    public AppUserDetailsService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    private final AppUserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String identity) throws UsernameNotFoundException {

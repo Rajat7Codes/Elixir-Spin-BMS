@@ -11,7 +11,7 @@ import java.util.Optional;
  * Spring Data JPA repository for the {@link AppUser} entity.
  */
 @Repository
-public interface UserRepository extends JpaRepository<AppUser, Long> {
+public interface AppUserRepository extends JpaRepository<AppUser, Long> {
 
     @Query("FROM AppUser a WHERE " +
             "(a.email is not null AND a.email=:identity) OR " +
