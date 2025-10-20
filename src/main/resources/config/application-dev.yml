@@ -19,15 +19,12 @@ spring:
       enabled: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:4321/clash_db
+    url: jdbc:postgresql://localhost:5432/clash_db
     username: postgres
-    password: root
+    password: postgres@123
   jpa:
     hibernate:
       ddl-auto: update
-
-server:
-  port: 8080
 
 app:
   jwt:
@@ -37,4 +34,4 @@ app:
 clashroyale:
   api:
     base-url: https://api.clashroyale.com/v1
-    token: ${CLASH_ROYALE_API_TOKEN}  # set in env for security
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImI5MzM5M2U4LWMzMzMtNGQyNy05ZTNmLWExMTJiMzJiZmZkNyIsImlhdCI6MTc2MDg4MDA4NCwic3ViIjoiZGV2ZWxvcGVyLzMyNTJjMmU4LTE0YzktYTlkNy0xZGY2LTJhMmI0ZDM3YTUxZCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMDMuNTQuMTAwLjIwOSJdLCJ0eXBlIjoiY2xpZW50In1dfQ.7d8-m3abr_vkLg2XIm-cFP8_WDX99ywiln5K8jxs6cSWc5l20XotkVj_20YBy9fD2__HtDUJHkSXQca2ksZLyw

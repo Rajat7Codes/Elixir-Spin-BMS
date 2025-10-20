@@ -13,3 +13,6 @@ spring:
     group:
       dev:
         - dev
+
+server:
+  port: 8082

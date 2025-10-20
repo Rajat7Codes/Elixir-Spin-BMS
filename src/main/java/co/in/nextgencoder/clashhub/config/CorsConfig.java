@@ -15,7 +15,7 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration cors = new CorsConfiguration();
         cors.setAllowCredentials(true);
-        cors.setAllowedOrigins(Arrays.asList("http://localhost:5173")); // React app
+        cors.setAllowedOrigins(Arrays.asList("http://localhost:5173", "https://www.elixirspin.com", "https://elixirspin.com")); // React app
         cors.setAllowedHeaders(Arrays.asList("Origin", "Content-Type", "Accept", "Authorization"));
         cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
 
